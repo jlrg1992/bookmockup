@@ -1,3 +1,4 @@
+alert("hola")
 function preload() {
   BOX_WIDTH = 1083;
   BOX_HEIGHT = 1457;
