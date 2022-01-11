@@ -2,12 +2,12 @@ function preload() {
   BOX_WIDTH = 1083;
   BOX_HEIGHT = 1457;
   BOX_DEPTH = 345;
-  FRONT_IMG = loadImage('images/front.png');
-  LEFT_IMG = loadImage('images/left.png');
-  TOP_IMG = loadImage('images/top.png');
-  RIGHT_IMG = loadImage('images/right.png');
-  BOTTOM_IMG = loadImage('images/bottom.png');
-  BACK_IMG = loadImage('images/back.png');
+  FRONT_IMG = loadImage('descarga.jpeg');
+  LEFT_IMG = loadImage('descarga.jpeg');
+  TOP_IMG = loadImage('descarga.jpeg');
+  RIGHT_IMG = loadImage('descarga.jpeg');
+  BOTTOM_IMG = loadImage('descarga.jpeg');
+  BACK_IMG = loadImage('descarga.jpeg');
 }
 
 function setup() {
