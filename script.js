@@ -1,14 +1,13 @@
-alert("hola")
 function preload() {
   BOX_WIDTH = 1083;
   BOX_HEIGHT = 1457;
   BOX_DEPTH = 345;
   FRONT_IMG = loadImage('descarga.jpeg');
-  LEFT_IMG = loadImage('descarga.jpeg');
-  TOP_IMG = loadImage('descarga.jpeg');
-  RIGHT_IMG = loadImage('descarga.jpeg');
-  BOTTOM_IMG = loadImage('descarga.jpeg');
-  BACK_IMG = loadImage('descarga.jpeg');
+  LEFT_IMG = loadImage('images.jpeg');
+  TOP_IMG = loadImage('images.jpeg');
+  RIGHT_IMG = loadImage('images.jpeg');
+  BOTTOM_IMG = loadImage('images.jpeg');
+  BACK_IMG = loadImage('images.jpeg');
 }
 
 function setup() {
