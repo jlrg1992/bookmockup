@@ -20,6 +20,7 @@ function setup() {
 function drawFaceBox(boxWidth, boxHeight, boxDepth,
     front, top, right, bottom, left, back) {
   angleMode(DEGREES); 
+  noStroke();
   let w = boxWidth * SCALE_FACTOR;
   let h = boxHeight * SCALE_FACTOR;
   let d = boxDepth * SCALE_FACTOR;
@@ -66,7 +67,7 @@ function drawFaceBox(boxWidth, boxHeight, boxDepth,
 }
 
 function draw() {
-  background(50);
+  background(250);
 
   // Simple rotation control by mouse.
   rotateX(mouseY);
