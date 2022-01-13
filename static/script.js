@@ -3,19 +3,21 @@ let sliderY
 let inputD
 let inputY
 let size = 800
-
+if(!prefix){
+  let prefix = ''
+}
 
 
 function preload() {
   BOX_WIDTH = 1083;
   BOX_HEIGHT = 1457;
   BOX_DEPTH = 345;
-  FRONT_IMG = loadImage('static/descarga.jpeg');
-  LEFT_IMG = loadImage('static/images.jpg');
-  TOP_IMG = loadImage('static/images.jpg');
-  RIGHT_IMG = loadImage('static/images.jpg');
-  BOTTOM_IMG = loadImage('static/images.jpg');
-  BACK_IMG = loadImage('static/images.jpg');
+  FRONT_IMG = loadImage(prefix+'static/descarga.jpeg');
+  LEFT_IMG = loadImage(prefix+'static/images.jpg');
+  TOP_IMG = loadImage(prefix+'static/images.jpg');
+  RIGHT_IMG = loadImage(prefix+'static/images.jpg');
+  BOTTOM_IMG = loadImage(prefix+'static/images.jpg');
+  BACK_IMG = loadImage(prefix+'static/images.jpg');
 }
 
 function setup() {
