@@ -1,19 +1,35 @@
+let sliderD;
+let sliderY
+let inputD
+let inputY
+let size = 800
+
+
+
 function preload() {
   BOX_WIDTH = 1083;
   BOX_HEIGHT = 1457;
   BOX_DEPTH = 345;
-  FRONT_IMG = loadImage('descarga.jpeg');
-  LEFT_IMG = loadImage('images.jpeg');
-  TOP_IMG = loadImage('images.jpeg');
-  RIGHT_IMG = loadImage('images.jpeg');
-  BOTTOM_IMG = loadImage('images.jpeg');
-  BACK_IMG = loadImage('images.jpeg');
+  FRONT_IMG = loadImage('static/descarga.jpeg');
+  LEFT_IMG = loadImage('static/images.jpg');
+  TOP_IMG = loadImage('static/images.jpg');
+  RIGHT_IMG = loadImage('static/images.jpg');
+  BOTTOM_IMG = loadImage('static/images.jpg');
+  BACK_IMG = loadImage('static/images.jpg');
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(size, size, WEBGL);
+  sliderD = createSlider(100,400,345,1)
+  sliderY = createSlider(0,45,20,1)
+  sliderD.position(10,10)
+  sliderY.position(size/2+10,10)
+  inputD = createInput(345)
+  inputY = createInput(20)
+  inputD.position(10,size-20)
+  inputY.position(size/2 + 10, size-20)
   // Make sure the box always fit the screen.
-  SCALE_FACTOR = windowHeight / 2 /
+  SCALE_FACTOR = size / 2 /
       Math.max(Math.max(BOX_WIDTH, BOX_HEIGHT), BOX_DEPTH);
 }
 
@@ -68,11 +84,14 @@ function drawFaceBox(boxWidth, boxHeight, boxDepth,
 
 function draw() {
   background(250);
-
+  rd = sliderD.value()
+  let ry = sliderY.value()
+  inputD.value(rd)
+  inputY.value(ry)
   // Simple rotation control by mouse.
-  rotateX(mouseY);
-  rotateY(-mouseX);
+  //rotateX(rx);
+  rotateY(-ry);
 
-  drawFaceBox(BOX_WIDTH, BOX_HEIGHT, BOX_DEPTH,
+  drawFaceBox(BOX_WIDTH, BOX_HEIGHT, rd,
       FRONT_IMG, TOP_IMG, RIGHT_IMG, BOTTOM_IMG, LEFT_IMG, BACK_IMG);
 }
