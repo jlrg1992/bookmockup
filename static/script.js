@@ -85,7 +85,7 @@ function drawFaceBox(boxWidth, boxHeight, boxDepth,
 }
 
 function draw() {
-  background(250);
+  background(250, 0);
   rd = sliderD.value()
   let ry = sliderY.value()
   inputD.value(rd)
